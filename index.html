@@ -1,15 +1,232 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Harsha Vardhan Dasam — Software Developer & AI/ML Enthusiast. Portfolio showcasing projects, skills, and experience." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <title>Harsha Vardhan Dasam | Portfolio</title>
+    <style>
+      :root {
+        --bg: #f7fafc;
+        --card: #ffffff;
+        --muted: #6b7280;
+        --accent: #0f172a;
+        --accent-2: #0369a1;
+        --maxw: 900px;
+      }
+      html,body{
+        height:100%;
+        margin:0;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        background:var(--bg);
+        color:var(--accent);
+      }
+      .wrap{
+        max-width:var(--maxw);
+        margin:36px auto;
+        padding:28px;
+      }
+      .card{
+        background:var(--card);
+        border-radius:12px;
+        box-shadow:0 6px 24px rgba(15,23,42,0.06);
+        padding:28px;
+      }
+      header{
+        display:flex;
+        flex-direction:column;
+        gap:8px;
+        margin-bottom:18px;
+      }
+      .name{
+        font-size:28px;
+        font-weight:800;
+        letter-spacing:0.6px;
+      }
+      .tagline{
+        color:var(--muted);
+        font-weight:500;
+      }
+      .contact{
+        color:var(--muted);
+        font-size:14px;
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px;
+      }
+      .contact a{ color:var(--accent-2); text-decoration:none; }
+      hr.section-sep{
+        border:0;
+        border-top:1px solid #eef2f7;
+        margin:18px 0;
+      }
+      .two-col{
+        display:grid;
+        grid-template-columns:1fr 320px;
+        gap:20px;
+      }
+      @media (max-width:880px){
+        .two-col{ grid-template-columns:1fr; }
+      }
+      h2{
+        font-size:16px;
+        margin:0 0 8px 0;
+        color:var(--accent);
+      }
+      .summary{
+        color:var(--muted);
+        line-height:1.5;
+        margin-bottom:12px;
+      }
+      ul.clean{ padding-left:16px; margin:0 0 8px 0; color:var(--muted); }
+      .skill-grid{
+        display:grid;
+        grid-template-columns:repeat(2, minmax(0,1fr));
+        gap:8px;
+      }
+      .meta{
+        font-size:14px;
+        color:var(--muted);
+      }
+      .section{
+        margin-bottom:14px;
+      }
+      .experience-item, .project-item, .edu-item{
+        margin-bottom:10px;
+      }
+      .muted-bullet{ color:var(--muted); font-size:14px; }
+      footer{
+        margin-top:18px;
+        color:var(--muted);
+        font-size:13px;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="wrap">
+      <div class="card">
+        <header>
+          <div class="name">HARSHA VARDHAN DASAM</div>
+          <div class="tagline">Software Developer • AI/ML Enthusiast</div>
+          <div class="contact">
+            <span>Bengaluru, India</span>
+            <span>•</span>
+            <a href="tel:+919886664139">+91 9886664139</a>
+            <span>•</span>
+            <a href="mailto:harshavardhan.dasam@gmail.com">harshavardhan.dasam@gmail.com</a>
+            <span>•</span>
+            <a href="https://linkedin.com/in/harsha-vardhan-983561365" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </header>
+
+        <hr class="section-sep">
+
+        <div class="two-col">
+          <main>
+            <section class="section">
+              <h2>SUMMARY</h2>
+              <p class="summary">Computer Science student skilled in Python, machine learning, and backend development. Experienced in AI-driven tools including chatbots, ML models, and personalized study assistants.</p>
+            </section>
+
+            <section class="section">
+              <h2>EXPERIENCE</h2>
+              <div class="experience-item">
+                <div style="font-weight:600;">Python Development Intern — CodexIntern <span style="font-weight:400;color:var(--muted)"> (July 2025)</span></div>
+                <ul class="clean">
+                  <li>Built a regression model achieving R² = 0.82 for predicting house prices.</li>
+                  <li>Developed a multi-turn chatbot using Gemini API.</li>
+                  <li>Strengthened debugging, ML workflows, and documentation practices.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2>PROJECTS</h2>
+
+              <div class="project-item">
+                <div style="font-weight:600;">Chatbot using Gemini 2.5 Flash</div>
+                <ul class="clean">
+                  <li>Implemented multi-turn conversation memory and dynamic response generation.</li>
+                  <li>Designed structured input-handling pipelines.</li>
+                </ul>
+              </div>
+
+              <div class="project-item">
+                <div style="font-weight:600;">House Price Prediction — Regression Model</div>
+                <ul class="clean">
+                  <li>Performed data cleaning, feature engineering, encoding, and regression model training.</li>
+                  <li>Enabled predictions based on size, bedrooms, and location.</li>
+                </ul>
+              </div>
+
+              <div class="project-item">
+                <div style="font-weight:600;">AI Study Buddy</div>
+                <ul class="clean">
+                  <li>Developed an AI-powered study companion capable of summarizing notes, generating quizzes, and tracking progress.</li>
+                  <li>Integrated retrieval-based memory, personalized study paths, and LLM-driven assistance.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2>EDUCATION</h2>
+              <div class="edu-item">
+                <div style="font-weight:600;">New Horizon College of Engineering, Bengaluru</div>
+                <div class="meta">B.Tech in Computer Science (2024 – Present) — CGPA: 8.65</div>
+              </div>
+              <div class="edu-item">
+                <div style="font-weight:600;">New Horizon Gurukul</div>
+                <div class="meta">12th – PCMC (2023 – 2024) | 65% · 10th (2021 – 2022) | 94%</div>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2>ACHIEVEMENTS</h2>
+              <ul class="clean">
+                <li>3rd Place — AI Heist, Quantum X-25 (NHCE).</li>
+              </ul>
+            </section>
+
+            <section class="section">
+              <h2>INTERESTS</h2>
+              <ul class="clean">
+                <li>Keyboard · Music · Badminton</li>
+              </ul>
+            </section>
+          </main>
+
+          <aside>
+            <section class="section">
+              <h2>SKILLS</h2>
+              <div class="skill-grid">
+                <div>
+                  <strong>Programming</strong>
+                  <div class="muted-bullet">Python, Java, C</div>
+                </div>
+                <div>
+                  <strong>AI / ML</strong>
+                  <div class="muted-bullet">Regression Models, Transformers, LangChain, RAG, TensorFlow, scikit-learn</div>
+                </div>
+                <div>
+                  <strong>Tools</strong>
+                  <div class="muted-bullet">Git, VS Code, Jupyter Notebook</div>
+                </div>
+                <div>
+                  <strong>Concepts</strong>
+                  <div class="muted-bullet">OOP, Data Structures, ML Evaluation</div>
+                </div>
+              </div>
+            </section>
+          </aside>
+        </div>
+
+        <footer>
+          Last updated: 2026-02-25
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
