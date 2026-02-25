@@ -1,0 +1,50 @@
+# Profile Application — Walkthrough
+
+## What Was Built
+A React.js single-page profile/portfolio for **Harsha Vardhan Dasam** with a premium dark + light blue theme.
+
+## Tech Stack
+- **Vite + React** (scaffolded via `create-vite`)
+- **Vanilla CSS** with Inter font, custom design tokens
+- Node.js LTS installed via `winget` (was missing)
+
+## Components Created
+
+| Component | Purpose |
+|-----------|---------|
+| [Header.jsx](file:///c:/Users/harsh/OneDrive/Documents/Vibe_coding_NHCE/src/components/Header.jsx) | Hero with avatar, name, tagline, contact |
+| [Summary.jsx](file:///c:/Users/harsh/OneDrive/Documents/Vibe_coding_NHCE/src/components/Summary.jsx) | Professional summary |
+| [Skills.jsx](file:///c:/Users/harsh/OneDrive/Documents/Vibe_coding_NHCE/src/components/Skills.jsx) | 4-category skill cards |
+| [Experience.jsx](file:///c:/Users/harsh/OneDrive/Documents/Vibe_coding_NHCE/src/components/Experience.jsx) | Internship details |
+| [Projects.jsx](file:///c:/Users/harsh/OneDrive/Documents/Vibe_coding_NHCE/src/components/Projects.jsx) | 3 project cards |
+| [Education.jsx](file:///c:/Users/harsh/OneDrive/Documents/Vibe_coding_NHCE/src/components/Education.jsx) | Timeline education |
+| [Achievements.jsx](file:///c:/Users/harsh/OneDrive/Documents/Vibe_coding_NHCE/src/components/Achievements.jsx) | Achievement highlight |
+| [Interests.jsx](file:///c:/Users/harsh/OneDrive/Documents/Vibe_coding_NHCE/src/components/Interests.jsx) | Emoji interest chips |
+| [Footer.jsx](file:///c:/Users/harsh/OneDrive/Documents/Vibe_coding_NHCE/src/components/Footer.jsx) | Links + copyright |
+
+## Design Features
+- 🎨 **Light blue + black theme** with CSS custom properties
+- ✨ **Glowing card shadows** and hover lift effects
+- 🎭 **Fade-in animations** on scroll
+- 📱 **Fully responsive** (mobile, tablet, desktop)
+- 🔵 **Initials avatar** with blue glow (falls back gracefully)
+
+## Verification
+
+````carousel
+![Hero section with avatar, name, and contact info](C:\Users\harsh\.gemini\antigravity\brain\20bfd30a-1fb6-4bad-9473-b6402f642406\profile_page_top_1771998573879.png)
+<!-- slide -->
+![Achievements, Interests, and Footer sections](C:\Users\harsh\.gemini\antigravity\brain\20bfd30a-1fb6-4bad-9473-b6402f642406\profile_page_bottom_1771998628284.png)
+````
+
+![Browser recording of the full app](C:\Users\harsh\.gemini\antigravity\brain\20bfd30a-1fb6-4bad-9473-b6402f642406\profile_app_verify_1771998525506.webp)
+
+## How to Run
+```bash
+cd c:\Users\harsh\OneDrive\Documents\Vibe_coding_NHCE
+npm run dev
+# Opens at http://localhost:5173
+```
+
+> [!TIP]
+> To add your real photo, place a `profile.jpg` file in the `public/` folder. The app will automatically use it instead of the initials avatar.
