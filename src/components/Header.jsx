@@ -9,7 +9,7 @@ function Header() {
                 {!imgError ? (
                     <img
                         className="avatar"
-                        src="/profile.jpg"
+                        src="profile/DSC_8280copy.jpg"
                         alt="Harsha Vardhan Dasam"
                         onError={() => setImgError(true)}
                     />
