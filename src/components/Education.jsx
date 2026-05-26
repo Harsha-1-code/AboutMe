@@ -7,7 +7,7 @@ const educationData = [
     },
     {
         institution: 'New Horizon Gurukul',
-        degree: '12th – PCMC',
+        degree: '12th – CBSE',
         period: '2023 – 2024',
         score: '65%',
     },
