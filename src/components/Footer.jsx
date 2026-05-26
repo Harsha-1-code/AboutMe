@@ -10,6 +10,13 @@ function Footer() {
                 >
                     LinkedIn
                 </a>
+                <a
+                    href="https://github.com/Harsha-1-code"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
             </div>
             <div className="footer-divider"></div>
             <p>© 2025 Harsha Vardhan Dasam. All rights reserved.</p>

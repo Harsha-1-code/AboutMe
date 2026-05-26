@@ -40,6 +40,16 @@ function Header() {
                         LinkedIn
                     </a>
                 </span>
+                <span className="meta-item">
+                    💻{' '}
+                    <a
+                        href="https://github.com/Harsha-1-code"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+                </span>
             </div>
         </header>
     );
