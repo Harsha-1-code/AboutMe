@@ -3,7 +3,7 @@ const educationData = [
         institution: 'New Horizon College of Engineering, Bengaluru',
         degree: 'B.Tech in Computer Science',
         period: '2024 – Present',
-        score: 'CGPA: 8.65',
+        score: 'CGPA: 8.25',
     },
     {
         institution: 'New Horizon Gurukul',

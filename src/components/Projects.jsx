@@ -14,11 +14,11 @@ const projectData = [
         ],
     },
     {
-        name: '📚 AI Study Buddy',
+        name: '📚Pharmacy LLM',
         bullets: [
-            'Developed an AI-powered study companion capable of summarizing notes, generating quizzes, and tracking progress.',
-            'Integrated retrieval-based memory, personalized study paths, and LLM-driven assistance.',
-            'Designed to enhance learning efficiency and automate study workflows.',
+            'Engineered a specialized large language model for pharmaceutical and medical queries, ensuring responses adhere to professional medical standards.',
+            'Fine-tuned the model on pharmaceutical textbooks and medical references to enhance domain knowledge and accuracy.',
+            'Optimized the models inference performance to ensure reliable, high-integrity responses regarding drug compositions and usages.',
         ],
     },
 ];
