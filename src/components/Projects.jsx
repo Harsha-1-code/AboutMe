@@ -1,9 +1,9 @@
 const projectData = [
     {
-        name: '🤖 Chatbot using Gemini 2.5 Flash',
+        name: '💨Smoke and fire Detector Web App',
         bullets: [
-            'Implemented multi-turn conversation memory and dynamic response generation.',
-            'Designed structured input-handling pipelines.',
+            'Developed a smart smoke detection system using ESP32 and Arduino IDE to monitor air quality and detect fire hazards in real-time.',
+            'Implemented a dashboard to display air quality data and upload images when smoke is detected.',
         ],
     },
     {
