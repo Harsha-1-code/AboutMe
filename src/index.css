@@ -817,3 +817,201 @@ body::before {
 .certificate-link:hover {
   color: var(--blue-200);
 }
+
+/* ─── Certificate Preview and Modal Lightbox ─── */
+.certificate-preview {
+  margin-top: 12px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid var(--dark-400);
+  transition: var(--transition);
+}
+
+.certificate-preview img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.certificate-preview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 26, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+
+.zoom-icon {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  background: rgba(33, 150, 243, 0.85);
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+  transform: translateY(10px);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.certificate-preview:hover img {
+  transform: scale(1.04);
+  filter: brightness(0.9);
+}
+
+.certificate-preview:hover .certificate-preview-overlay {
+  opacity: 1;
+}
+
+.certificate-preview:hover .zoom-icon {
+  transform: translateY(0);
+}
+
+/* ─── Certificate Modal ─── */
+.cert-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(5, 5, 12, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 24px;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.cert-modal-content {
+  position: relative;
+  background: linear-gradient(135deg, var(--dark-700), var(--dark-600));
+  border: 1px solid var(--dark-300);
+  border-radius: 16px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(66, 165, 245, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: zoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.cert-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(10, 10, 26, 0.6);
+  border: 1px solid var(--dark-300);
+  color: var(--text-primary);
+  font-size: 2rem;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.cert-modal-close:hover {
+  background: var(--blue-500);
+  border-color: var(--blue-400);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.cert-modal-image {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  background: #000;
+  display: block;
+}
+
+.cert-modal-caption {
+  padding: 20px 24px;
+  background: var(--dark-800);
+  border-top: 1px solid var(--dark-400);
+}
+
+.cert-modal-caption h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.cert-modal-caption p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.cert-modal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--blue-400);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.cert-modal-link:hover {
+  color: var(--blue-200);
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Adjustments for Modal */
+@media (max-width: 576px) {
+  .cert-modal-backdrop {
+    padding: 12px;
+  }
+  
+  .cert-modal-close {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.6rem;
+  }
+
+  .cert-modal-caption {
+    padding: 16px;
+  }
+  
+  .cert-modal-caption h3 {
+    font-size: 1.05rem;
+  }
+}
