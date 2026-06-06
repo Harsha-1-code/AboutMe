@@ -1,0 +1,114 @@
+{
+  "header": {
+    "name": "Harsha Vardhan Dasam",
+    "tagline": "Software Developer • AI/ML Enthusiast",
+    "location": "Bengaluru, India",
+    "phone": "+91 9886664139",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "summary": {
+    "title": "Summary",
+    "text": "Computer Science student skilled in Python, machine learning, and backend development. Experienced in AI-driven tools including chatbots, ML models, and personalized study assistants."
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "Programming": "Programming",
+      "AI / ML": "AI / ML",
+      "Tools": "Tools",
+      "Concepts": "Concepts"
+    },
+    "tags": {
+      "Python": "Python",
+      "Java": "Java",
+      "C": "C",
+      "Regression Models": "Regression Models",
+      "Transformers": "Transformers",
+      "LangChain": "LangChain",
+      "RAG": "RAG",
+      "TensorFlow": "TensorFlow",
+      "scikit-learn": "scikit-learn",
+      "Git": "Git",
+      "VS Code": "VS Code",
+      "Jupyter Notebook": "Jupyter Notebook",
+      "OOP": "OOP",
+      "Data Structures": "Data Structures",
+      "ML Evaluation": "ML Evaluation"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "role": "Python Development Intern",
+    "company": "CodexIntern",
+    "date": "July 2025",
+    "bullet1": "Built a regression model achieving R² = 0.82 for predicting house prices.",
+    "bullet2": "Developed a multi-turn chatbot using Gemini API.",
+    "bullet3": "Strengthened debugging, ML workflows, and documentation practices."
+  },
+  "projects": {
+    "title": "Projects",
+    "items": {
+      "smoke_detector": {
+        "name": "💨Smoke and fire Detector Web App",
+        "bullet1": "Developed a smart smoke detection system using ESP32 and Arduino IDE to monitor air quality and detect fire hazards in real-time.",
+        "bullet2": "Implemented a dashboard to display air quality data and upload images when smoke is detected."
+      },
+      "house_prediction": {
+        "name": "🏠 House Price Prediction — Regression Model",
+        "bullet1": "Performed data cleaning, feature engineering, encoding, and regression model training.",
+        "bullet2": "Enabled predictions based on size, bedrooms, and location."
+      },
+      "pharmacy_llm": {
+        "name": "📚Pharmacy LLM",
+        "bullet1": "Engineered a specialized large language model for pharmaceutical and medical queries, ensuring responses adhere to professional medical standards.",
+        "bullet2": "Fine-tuned the model on pharmaceutical textbooks and medical references to enhance domain knowledge and accuracy.",
+        "bullet3": "Optimized the models inference performance to ensure reliable, high-integrity responses regarding drug compositions and usages."
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "nhce": {
+      "institution": "New Horizon College of Engineering, Bengaluru",
+      "degree": "B.Tech in Computer Science",
+      "period": "2024 – Present",
+      "score": "CGPA: 8.25"
+    },
+    "gurukul_12th": {
+      "institution": "New Horizon Gurukul",
+      "degree": "12th – CBSE",
+      "period": "2023 – 2024",
+      "score": "65%"
+    },
+    "gurukul_10th": {
+      "institution": "New Horizon Gurukul",
+      "degree": "10th",
+      "period": "2021 – 2022",
+      "score": "94%"
+    }
+  },
+  "achievements": {
+    "title": "Achievements",
+    "ai_heist": "3rd Place"
+  },
+  "certificates": {
+    "title": "Hackathon Certificates",
+    "hoverTip": "Click to view full certificate",
+    "zoom": "🔍 View Full Size",
+    "verify": "Verify Certificate ↗",
+    "close": "Close modal"
+  },
+  "interests": {
+    "title": "Interests",
+    "keyboard": "Keyboard",
+    "music": "Music",
+    "badminton": "Badminton"
+  },
+  "footer": {
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "copyright": "© 2025 Harsha Vardhan Dasam. All rights reserved."
+  }
+}
