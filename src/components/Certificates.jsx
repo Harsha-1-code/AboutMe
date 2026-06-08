@@ -6,16 +6,12 @@ function Certificates() {
 
     useEffect(() => {
         const handleKeyDown = (e) => {
-            if (e.key === 'Escape') {
-                setActiveCert(null);
-            }
+            if (e.key === 'Escape') setActiveCert(null);
         };
-
         if (activeCert) {
             window.addEventListener('keydown', handleKeyDown);
             document.body.style.overflow = 'hidden';
         }
-
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
             document.body.style.overflow = '';
@@ -23,80 +19,82 @@ function Certificates() {
     }, [activeCert]);
 
     return (
-        <section className="section fade-in">
-            <h2 className="section-title">
-                <span className="icon">📜</span> Hackathon Certificates
-            </h2>
-            <div className="certificates-grid">
-                {certificatesData.map((cert, index) => (
-                    <div className="certificate-card" key={index}>
-                        <div className="certificate-header">
-                            <span className="certificate-badge">🏅</span>
-                            <div className="certificate-info">
-                                <div className="certificate-title">{cert.title}</div>
-                                <div className="certificate-issuer">{cert.issuer}</div>
-                                <div className="certificate-date">{cert.date}</div>
+        <section className="slide slide--light" data-section="9">
+            <div className="slide__frame">
+                <span className="slide__number" data-animate="fade-left">10</span>
+
+                <h2 className="certifications__heading" data-animate="fade-up">
+                    HACKATHON<br />CERTIFICATES
+                </h2>
+
+                <div className="certifications__grid">
+                    {certificatesData.map((cert, index) => (
+                        <div
+                            className="cert-card"
+                            key={index}
+                            data-animate="fade-up"
+                            data-delay={String(index + 2)}
+                        >
+                            {cert.image && (
+                                <div
+                                    className="cert-card__image-wrapper"
+                                    onClick={() => setActiveCert(cert)}
+                                >
+                                    <img src={cert.image} alt={cert.title} />
+                                    <div className="cert-card__overlay">
+                                        🔍 View Full Size
+                                    </div>
+                                </div>
+                            )}
+                            <div className="cert-card__info">
+                                <div className="cert-card__title">{cert.title}</div>
+                                <div className="cert-card__issuer">{cert.issuer}</div>
+                                <div className="cert-card__date">{cert.date}</div>
+                                {cert.link && (
+                                    <a
+                                        href={cert.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="cert-card__link"
+                                    >
+                                        Verify Certificate ↗
+                                    </a>
+                                )}
                             </div>
                         </div>
+                    ))}
+                </div>
 
-                        {cert.image && (
-                            <div 
-                                className="certificate-preview" 
-                                onClick={() => setActiveCert(cert)}
-                                title="Click to view full certificate"
-                            >
-                                <img src={cert.image} alt={cert.title} />
-                                <div className="certificate-preview-overlay">
-                                    <span className="zoom-icon">🔍 View Full Size</span>
-                                </div>
-                            </div>
-                        )}
-
-                        {cert.link && (
-                            <a
-                                href={cert.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="certificate-link"
-                            >
-                                Verify Certificate ↗
-                            </a>
-                        )}
-                    </div>
-                ))}
-            </div>
-
-            {activeCert && (
-                <div className="cert-modal-backdrop" onClick={() => setActiveCert(null)}>
-                    <div className="cert-modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button 
-                            className="cert-modal-close" 
+                {activeCert && (
+                    <div className="modal-backdrop" onClick={() => setActiveCert(null)}>
+                        <button
+                            className="modal-close"
                             onClick={() => setActiveCert(null)}
                             aria-label="Close modal"
                         >
-                            &times;
+                            ×
                         </button>
-                        <img src={activeCert.image} alt={activeCert.title} className="cert-modal-image" />
-                        <div className="cert-modal-caption">
-                            <h3>{activeCert.title}</h3>
-                            <p>{activeCert.issuer} &bull; {activeCert.date}</p>
-                            {activeCert.link && (
-                                <a 
-                                    href={activeCert.link} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="cert-modal-link"
-                                >
-                                    Verify Certificate ↗
-                                </a>
-                            )}
+                        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                            <img src={activeCert.image} alt={activeCert.title} />
+                            <div className="modal-caption">
+                                <h3>{activeCert.title}</h3>
+                                <p>{activeCert.issuer} &bull; {activeCert.date}</p>
+                                {activeCert.link && (
+                                    <a
+                                        href={activeCert.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Verify Certificate ↗
+                                    </a>
+                                )}
+                            </div>
                         </div>
                     </div>
-                </div>
-            )}
+                )}
+            </div>
         </section>
     );
 }
 
 export default Certificates;
-

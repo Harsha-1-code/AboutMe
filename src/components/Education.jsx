@@ -21,21 +21,31 @@ const educationData = [
 
 function Education() {
     return (
-        <section className="section fade-in">
-            <h2 className="section-title">
-                <span className="icon">🎓</span> Education
-            </h2>
-            <div className="education-timeline">
-                {educationData.map((edu, i) => (
-                    <div className="edu-item" key={i}>
-                        <div className="edu-content">
-                            <div className="edu-institution">{edu.institution}</div>
-                            <div className="edu-degree">{edu.degree}</div>
-                            <div className="edu-details">{edu.period}</div>
-                            <span className="edu-score">{edu.score}</span>
+        <section className="slide slide--light" data-section="6">
+            <div className="slide__frame">
+                <span className="slide__number" data-animate="fade-left">07</span>
+
+                <h2 className="education__heading" data-animate="fade-up">
+                    EDUCATION
+                </h2>
+
+                <div className="education__timeline">
+                    {educationData.map((edu, i) => (
+                        <div
+                            className="education__item"
+                            key={i}
+                            data-animate="fade-up"
+                            data-delay={String(i + 2)}
+                        >
+                            <div className="education__period">{edu.period}</div>
+                            <div>
+                                <div className="education__institution">{edu.institution}</div>
+                                <div className="education__degree">{edu.degree}</div>
+                                <span className="education__score">{edu.score}</span>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </section>
     );
